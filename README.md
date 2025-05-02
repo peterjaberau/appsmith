@@ -1,3 +1,25 @@
+# Run backend server
+```bash
+cd app/client
+./start-https.sh https://release.app.appsmith.com
+
+
+
+
+
+
+
+
+docker run --name wildcard-nginx -d \
+  -p 443:443 \
+  -v "$(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro" \
+  -v "$(pwd)/docker/localhost.pem:/etc/ssl/certs/cert.pem:ro" \
+  -v "$(pwd)/docker/localhost-key.pem:/etc/ssl/certs/key.pem:ro" \
+  nginx:alpine
+#app will start on dev.appsmith.com
+```
+
+
 <p align="center">
 <a href="https://www.appsmith.com?utm_source=github&utm_medium=organic&utm_campaign=readme">
   <img src="static/appsmith_logo_white.png" alt="Appsmith Logo" width="350">

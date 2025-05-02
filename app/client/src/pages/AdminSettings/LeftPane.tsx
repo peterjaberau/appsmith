@@ -234,7 +234,7 @@ export default function LeftPane() {
       {profileCategories.length > 0 && (
         <HeaderContainer>
           <StyledHeader kind="heading-s" renderAs="p">
-            Profile
+            Profile1
           </StyledHeader>
           <Categories
             categories={profileCategories}
